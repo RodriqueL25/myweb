@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RODRIQUE LUNGOH</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>WELCOME TO MY STUDENT WEBSITE</h1>
+        <h2>INTRODUCTION</h2>
+    </header>
+    <nav aria-label="Main navigation">
+        <a href="#about">About Me</a>
+        <a href="#hobbies">My Hobbies</a>
+        <a href="#learning plan">My Learning Plan</a>
+        <a href="#photos">My Photos</a>
+        <a href="#media">My Media</a>
+        <a href="#contact">Contact</a>
+        <a href="https://development.mozilla.org/en-US/docs/Learn_Web_Development" target="_blank" rel="noopener noreferrer">Learn Web Development With MDN</a>
+    </nav>
+
+    <main>
+
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>My name is Rodrick Lungoh. I am a student learning web Technologies. I am interested in learning how websites are built and how good design helps people find information easily. I enjoy watching anime, making music and coding. Through this
+                course, I hope to improve my HTML, CSS. and problem solving skills so I can create simple, accessible, and responsive web pages.
+            </p>
+        </section>
+
+        <section id="hobbies" class="content-section">
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>Watching Anime</li>
+                <li>Making Music</li>
+                <li>Coding</li>
+            </ul>
+        </section>
+
+        <section id="learning plan" class="content-section">
+            <h2>My Learning Plan</h2>
+
+            <ol>
+                <li>Practice HTML structure every week by building small pages.</li>
+                <li>Learn CSS layout, colours, spacing, and responsive design.</li>
+                <li>Test my pages in the browser and fix accessibility prroblems</li>
+            </ol>
+
+            <table>
+                <caption>Weekly web learning plan</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Topic</th>
+                        <th scope="col">Practice task</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML structure</td>
+                        <td>Build a page with header, nav, main, and footer.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>CSS styling</td>
+                        <td>Style a form, table, and photo gallery</td>
+                    </tr>
+
+                    <tr>
+                        <td>Friday</td>
+                        <td>Media and testing</td>
+                        <td>Test video, audio, links, and required form fields</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="photos" class="content-section">
+            <h2>My Photos</h2>
+
+            <div class="gallery">
+                <figure>
+                    <img src="images/photo1.jpg" alt="My study desk with a laptop and notebook">
+                    <figcaption>My study desk where I practice web development.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/photo2.jpg" alt="A of my campus or learning environment">
+                    <figcaption>The place where I often study and take notes.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/photo3.jpg" alt="A hobby or activity that I enjoy">
+                    <figcaption>One of my hobbies outside of class.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="media" class="content-section">
+            <h2>My Media</h2>
+
+            <h3>Self-information video</h3>
+            <video controls width="480">
+                <source src="videos/intro.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+            <p>
+                Video summary:My name is Rodrick Lungoh. I am studying web technologies. I hope to learn and fully understand web tech.
+            </p>
+
+            <h3>Audio clip</h3>
+            <audio controls>
+                <source src="videos/voice.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <p>
+                In this recording, I describe one of my favourite hobbies outside of class.
+            </p>
+        </section>
+
+        <section id="content" class="content-section">
+            <h2>Contact</h2>
+
+            <form action="#" method="post">
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="topic">Topic:</label>
+                    <select id="topic" name="topic">
+                        <option value="question">Question</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="collaboration">Colaboration</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </p>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <p class="form-note">
+                This form is for browser demonstration only. It does not send data anywhere.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Rodrick Lungoh. Built for ICT251 Activity 2.</p>
+    </footer>
+</body>
+
+</html>
