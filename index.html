@@ -4,53 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RODRIQUE LUNGOH</title>
+    <title>Rodrick Lungoh | Student Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>WELCOME TO MY STUDENT WEBSITE</h1>
-        <h2>INTRODUCTION</h2>
+
+    <header class="site-header">
+        <div class="intro-area">
+            <p class="eyebrow">ICT251 · Web Technologies</p>
+            <h1>Rodrick Lungoh</h1>
+            <p class="programme">Computer Science Student</p>
+            <p class="intro-text">
+                I am learning to build clean, accessible, and interactive websites. This portfolio shows my progress, my hobbies, and the skills I am developing.
+            </p>
+            <a href="#projects" class="btn-primary">View My Projects</a>
+        </div>
+
+        <nav aria-label="Main navigation" class="main-nav">
+            <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navMenu">
+                ☰ Menu
+            </button>
+            <div id="navMenu" class="nav-menu">
+                <a href="#about">About Me</a>
+                <a href="#hobbies">My Hobbies</a>
+                <a href="#learning-plan">My Learning Plan</a>
+                <a href="#projects">Projects &amp; Skills</a>
+                <a href="#photos">My Photos</a>
+                <a href="#media">My Media</a>
+                <a href="#contact">Contact</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noopener">Learn Web Development with MDN</a>
+            </div>
+        </nav>
     </header>
-    <nav aria-label="Main navigation">
-        <a href="#about">About Me</a>
-        <a href="#hobbies">My Hobbies</a>
-        <a href="#learning plan">My Learning Plan</a>
-        <a href="#photos">My Photos</a>
-        <a href="#media">My Media</a>
-        <a href="#contact">Contact</a>
-        <a href="https://development.mozilla.org/en-US/docs/Learn_Web_Development" target="_blank" rel="noopener noreferrer">Learn Web Development With MDN</a>
-    </nav>
 
     <main>
 
+        <!-- ABOUT -->
         <section id="about" class="content-section">
             <h2>About Me</h2>
-            <p>My name is Rodrick Lungoh. I am a student learning web Technologies. I am interested in learning how websites are built and how good design helps people find information easily. I enjoy watching anime, making music and coding. Through this
-                course, I hope to improve my HTML, CSS. and problem solving skills so I can create simple, accessible, and responsive web pages.
+            <p>
+                My name is Rodrick Lungoh. I am a student learning web technologies. I am interested in how websites are built and how good design helps people find information easily. I enjoy watching anime, making music, and coding. Through this course, I hope to improve
+                my HTML, CSS, and problem-solving skills so I can create simple, accessible, and responsive web pages.
             </p>
         </section>
 
+        <!-- HOBBIES -->
         <section id="hobbies" class="content-section">
             <h2>My Hobbies</h2>
-            <ul>
+            <ul class="hobby-list">
                 <li>Watching Anime</li>
                 <li>Making Music</li>
                 <li>Coding</li>
             </ul>
         </section>
 
-        <section id="learning plan" class="content-section">
+        <!-- LEARNING PLAN -->
+        <section id="learning-plan" class="content-section">
             <h2>My Learning Plan</h2>
 
-            <ol>
-                <li>Practice HTML structure every week by building small pages.</li>
+            <ol class="steps-list">
+                <li>Practise HTML structure every week by building small pages.</li>
                 <li>Learn CSS layout, colours, spacing, and responsive design.</li>
-                <li>Test my pages in the browser and fix accessibility prroblems</li>
+                <li>Test my pages in the browser and fix accessibility problems.</li>
             </ol>
 
-            <table>
+            <table class="plan-table">
                 <caption>Weekly web learning plan</caption>
                 <thead>
                     <tr>
@@ -59,20 +78,17 @@
                         <th scope="col">Practice task</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <tr>
                         <td>Monday</td>
                         <td>HTML structure</td>
-                        <td>Build a page with header, nav, main, and footer.</td>
+                        <td>Build a page with header, nav, main, and footer</td>
                     </tr>
-
                     <tr>
                         <td>Wednesday</td>
                         <td>CSS styling</td>
                         <td>Style a form, table, and photo gallery</td>
                     </tr>
-
                     <tr>
                         <td>Friday</td>
                         <td>Media and testing</td>
@@ -82,88 +98,156 @@
             </table>
         </section>
 
-        <section id="photos" class="content-section">
-            <h2>My Photos</h2>
+        <!-- PROJECTS / SKILLS -->
+        <section id="projects" class="content-section">
+            <h2>Projects &amp; Skills</h2>
+            <p>Here are three things I have learned and built during this course.</p>
 
-            <div class="gallery">
-                <figure>
-                    <img src="images/photo1.jpg" alt="My study desk with a laptop and notebook">
-                    <figcaption>My study desk where I practice web development.</figcaption>
-                </figure>
+            <!-- Feature: Project Filter -->
+            <div class="filter-bar">
+                <label for="projectSearch">Search projects:</label>
+                <input type="text" id="projectSearch" placeholder="Type a keyword...">
+                <button id="resetFilter" class="btn-secondary">Reset</button>
+                <p id="filterMessage" class="filter-message" role="status"></p>
+            </div>
 
-                <figure>
-                    <img src="images/photo2.jpg" alt="A of my campus or learning environment">
-                    <figcaption>The place where I often study and take notes.</figcaption>
-                </figure>
+            <div id="projectList" class="project-grid">
+                <article class="project-card" data-tags="html structure semantic">
+                    <h3>Semantic HTML Page</h3>
+                    <p>Built a multi-section page using header, nav, main, section, and footer.</p>
+                    <button class="btn-toggle" aria-expanded="false">Show details</button>
+                    <div class="project-details" hidden>
+                        <p>I learned how proper structure improves accessibility and makes CSS easier to manage.</p>
+                    </div>
+                </article>
 
-                <figure>
-                    <img src="images/photo3.jpg" alt="A hobby or activity that I enjoy">
-                    <figcaption>One of my hobbies outside of class.</figcaption>
-                </figure>
+                <article class="project-card" data-tags="css responsive flexbox grid">
+                    <h3>Responsive Photo Gallery</h3>
+                    <p>Created a gallery using CSS Grid that adapts to phone and desktop widths.</p>
+                    <button class="btn-toggle" aria-expanded="false">Show details</button>
+                    <div class="project-details" hidden>
+                        <p>I learned how <code>minmax()</code> and <code>auto-fit</code> can make a layout mobile-friendly without media queries.</p>
+                    </div>
+                </article>
+
+                <article class="project-card" data-tags="javascript form validation dom">
+                    <h3>Interactive Contact Form</h3>
+                    <p>Added JavaScript validation with live feedback and a local preview summary.</p>
+                    <button class="btn-toggle" aria-expanded="false">Show details</button>
+                    <div class="project-details" hidden>
+                        <p>I learned how to use <code>event.preventDefault()</code>, check user input, and update the DOM safely.</p>
+                    </div>
+                </article>
             </div>
         </section>
 
+        <!-- PHOTOS -->
+        <section id="photos" class="content-section">
+            <h2>My Photos</h2>
+
+            <!-- Feature: Gallery Viewer -->
+            <div class="gallery-viewer">
+                <img id="galleryImage" src="images/photo1.jpg" alt="My study desk with a laptop and notebook">
+                <p id="galleryCaption" class="gallery-caption">My study desk where I practise web development.</p>
+                <div class="gallery-controls">
+                    <button id="prevPhoto" class="btn-secondary">← Previous</button>
+                    <span id="photoCounter" class="photo-counter">1 / 3</span>
+                    <button id="nextPhoto" class="btn-secondary">Next →</button>
+                </div>
+            </div>
+
+            <div class="gallery-thumbs">
+                <figure>
+                    <img src="images/photo1.jpg" alt="My study desk with a laptop and notebook">
+                    <figcaption>My study desk.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/photo2.jpg" alt="A view of my campus or learning environment">
+                    <figcaption>The place where I often study.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/photo3.jpg" alt="A hobby or activity that I enjoy">
+                    <figcaption>One of my hobbies outside class.</figcaption>
+                </figure>
+            </div>
+
+            <p class="credit">All photos are my own unless credited here.</p>
+        </section>
+
+        <!-- MEDIA -->
         <section id="media" class="content-section">
             <h2>My Media</h2>
 
-            <h3>Self-information video</h3>
+            <h3>Self-introduction video</h3>
             <video controls width="480">
                 <source src="videos/intro.mp4" type="video/mp4">
                 Your browser does not support the video element.
             </video>
-            <p>
-                Video summary:My name is Rodrick Lungoh. I am studying web technologies. I hope to learn and fully understand web tech.
-            </p>
+            <p>Video summary: My name is Rodrick Lungoh. I am studying Computer Science. I hope to learn JavaScript.</p>
 
             <h3>Audio clip</h3>
             <audio controls>
                 <source src="videos/voice.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
-
-            <p>
-                In this recording, I describe one of my favourite hobbies outside of class.
-            </p>
+            <p>In this recording, I describe one of my hobbies and why I study web technologies.</p>
         </section>
 
-        <section id="content" class="content-section">
+        <!-- CONTACT -->
+        <section id="contact" class="content-section">
             <h2>Contact</h2>
+            <p class="form-note">Browser demonstration only — no message is sent.</p>
 
-            <form action="#" method="post">
+            <form id="contactForm" action="#" method="post" novalidate>
                 <p>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
+                    <span class="field-error" id="nameError"></span>
                 </p>
+
                 <p>
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
+                    <span class="field-error" id="emailError"></span>
                 </p>
+
                 <p>
                     <label for="topic">Topic:</label>
                     <select id="topic" name="topic">
                         <option value="question">Question</option>
                         <option value="feedback">Feedback</option>
-                        <option value="collaboration">Colaboration</option>
+                        <option value="collaboration">Collaboration</option>
                     </select>
                 </p>
+
                 <p>
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="field-error" id="messageError"></span>
                 </p>
 
-                <button type="submit">Send Message</button>
+                <button type="submit" class="btn-primary">Send message</button>
             </form>
 
-            <p class="form-note">
-                This form is for browser demonstration only. It does not send data anywhere.
-            </p>
+            <!-- Feature: Form Preview -->
+            <div id="formPreview" class="form-preview" hidden>
+                <h3>Validated Preview</h3>
+                <p><strong>Name:</strong> <span id="previewName"></span></p>
+                <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+                <p><strong>Topic:</strong> <span id="previewTopic"></span></p>
+                <p><strong>Message:</strong> <span id="previewMessage"></span></p>
+                <p class="form-note">This data was validated locally. No message was sent.</p>
+            </div>
         </section>
 
     </main>
 
-    <footer>
-        <p>&copy; 2026 Rodrick Lungoh. Built for ICT251 Activity 2.</p>
+    <footer class="site-footer">
+        <p>&copy; 2026 Rodrick Lungoh. Built for ICT251 Activity 3.</p>
+        <p><a href="https://github.com/YOUR-USERNAME/YOUR-REPO" target="_blank" rel="noopener">View Source on GitHub</a></p>
     </footer>
+
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>
