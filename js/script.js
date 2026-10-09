@@ -172,6 +172,35 @@ document.addEventListener("DOMContentLoaded", () => {
     navToggle.addEventListener("click", () => {
         const isOpen = navToggle.getAttribute("aria-expanded") === "true";
         navToggle.setAttribute("aria-expanded", String(!isOpen));
+        navToggle.textContent = isOpen ? "☰ Menu" : "✕ Close";
         navMenu.classList.toggle("nav-open");
+    });
+
+    /* ------------------------------------------------------------
+       FEATURE 6: Dark / light theme switch
+       ------------------------------------------------------------ */
+    const themeToggle = document.getElementById("themeToggle");
+    const body = document.body;
+
+    // Apply saved theme on page load
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        body.classList.add("dark");
+        themeToggle.textContent = "☀ Light";
+        themeToggle.setAttribute("aria-label", "Switch to light theme");
+    }
+
+    themeToggle.addEventListener("click", () => {
+        const isDark = body.classList.toggle("dark");
+
+        if (isDark) {
+            themeToggle.textContent = "☀ Light";
+            themeToggle.setAttribute("aria-label", "Switch to light theme");
+            localStorage.setItem("theme", "dark");
+        } else {
+            themeToggle.textContent = "🌙 Dark";
+            themeToggle.setAttribute("aria-label", "Switch to dark theme");
+            localStorage.setItem("theme", "light");
+        }
     });
 });
